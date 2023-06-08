@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anugular practise</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <!-- instead of href use Router-link to avoid reload or refresh -->
+              <!-- routerlinkActive is used to highlight the active link -->
+              <a
+                class="nav-link"
+                routerLink="/login"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/userlist"
+                routerLinkActive="active"
+                >Userlist</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/productlist"
+                routerLinkActive="active"
+                >Productlist</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/observable"
+                routerLinkActive="active"
+                >Obervables</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+
+<!-- router outlet is used to render our html page of defined path in browser -->
+<router-outlet></router-outlet>
+
+<!-- // @imput and @output concept (passing data from parent to child and vice-versa) -->
+
+<!-- <div class="col-md-12">
+  <div class="col-md-4 offset-md-4 mb-3 mt-2">
+    <div class="card border-3 border-info">
+      <div class="card-body">
+        <div class="text-center">
+          <h3>Parent</h3>
+          <h4>Random Unique number generator</h4>
+          <h4>{{ randomnumber }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="text-center">Data passing from parent to child</h3>
+<app-practise [child]="parent" (data)="getdata($event)"></app-practise> -->
+
+<!-- ----ngif and ngfor---- -->
+<!-- <div class="container">
+  <app-product></app-product>
+</div> -->
+
+<!-- --------------------attribute directive and switchcase----------------- -->
+<!-- <div class="col-md-12">
+  <div class="col-md-4 offset-md-4 mb-4 mt-5">
+    <div class="card" style="width: 25rem">
+      <div class="card-body">
+        <h3 [ngStyle]="{ color: 'blue' }">USER LIST</h3>
+        <app-userlist></app-userlist>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- -----------------service and provider----------------- -->
+<!-- <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-4 offset-md-1 mb-4 mt-5">
+      <div class="card" style="width: 25rem">
+        <div class="card-body">
+          <h3>Product</h3>
+          <app-product></app-product>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 offset-md-1 mb-4 mt-5">
+      <div class="card" style="width: 25rem">
+        <div class="card-body">
+          <h3>Product list</h3>
+          <app-productlist></app-productlist>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,40 @@
+<!-- -------------service and provider------------>
+<div class="col-md-4 offset-md-4 mb-4 mt-5">
+  <div class="card">
+    <div class="card-body">
+      <ul>
+        <h4>Name:</h4>
+        <li>
+          {{ prodservice.productname }}
+        </li>
+        <h4>price:</h4>
+        <li>{{ prodservice.price }}</li>
+        <h4>Quantity:</h4>
+        <li [ngStyle]="{ color: 'green' }">{{ prodservice.quantity }}</li>
+      </ul>
+
+      <button
+        class="btn btn-outline-success border-3 d-block mx-auto mt-2 w-50"
+        (click)="increase()"
+      >
+        +add
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <h1>BLOG POST</h1>
+<div class="col-md-12">
+  <div *ngFor="let blog of post">
+    <div *ngIf="blog.status === true">
+      <div class="col-md-4 offset-md-4 mb-4 mt-5">
+        <div class="card" style="width: 25rem">
+          <div class="card-body">
+            <h5 class="card-title">{{ blog.title }}</h5>
+            <p class="card-text">{{ blog.decp }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

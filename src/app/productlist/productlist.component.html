@@ -1,0 +1,19 @@
+<div class="col-md-4 offset-md-4 mb-4 mt-5">
+  <div class="card" style="width: 25rem">
+    <div class="card-body">
+      <ul>
+        <h4>Name:</h4>
+        <li>{{ list.productname }}</li>
+        <h4>price:</h4>
+        <li>{{ list.price }}</li>
+      </ul>
+      <button
+        class="btn btn-success d-block mt-3 mx-auto"
+        (click)="navproduct()"
+      >
+        view Product
+      </button>
+    </div>
+  </div>
+</div>
+<!-- <button (click)="increase()">+add</button> -->
